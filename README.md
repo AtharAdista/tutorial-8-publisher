@@ -14,3 +14,8 @@ run?
    - `localhost:5672` adalah alamat dan port server RabbitMQ. localhost menunjukkan bahwa server RabbitMQ berjalan di mesin lokal (komputer tempat program dijalankan), dan 5672 adalah port default yang digunakan oleh RabbitMQ.
   
     Nantinya publisher dan subscriber akan saling terhubung, sehingga publisher akan dapat mempublish data dan subscriber akan dapat mengambil data yang dikirim oleh publisher.
+
+Interface RabbitMQ
+
+![alt text](images/RabbitMQ_interface.png)
+
