@@ -30,3 +30,10 @@ console dari publisher ketika menjalankan cargo run
 
 Image diatas menunjukkan saat melakukan cargo run di publisher dan subscriber, maka publisher akan mengirimkan data melalui RabbitMQ, kemudian subscriber akan menerima data yang sudah dipublish oleh publisher. Publisher akan membuat koneksi dengan server message dalam kasus ini RabbitMQ, publisher mengirim pesan ke exchage, exchange bertanggung jawab untuk megarahkan pesan ke queue, kemudian subscriber akan menerima pesan yang ada di queue.
 
+spikes di RabbitMQ
+![alt text](spikes_RabbitMQ.png)
+
+pada gambar terlihat bahwa pada grafik kedua terjadi peningkatan, hal ini berhubungan dengan cargo run yang dijalankan di publisher, semakin sering publisher dijalankan maka akan terjadi peningkatan message rate karena RabbitMQ menerima lebih banyak pesan dalam suatu interval waktu. Pada grafik kedua saya menjalankan publisher lebih banyak daripada saat di grafik pertama.
+
+
+
