@@ -15,25 +15,30 @@ run?
   
     Nantinya publisher dan subscriber akan saling terhubung, sehingga publisher akan dapat mempublish data dan subscriber akan dapat mengambil data yang dikirim oleh publisher.
 
-Interface RabbitMQ
+### Interface RabbitMQ
 
 ![alt text](images/RabbitMQ_interface.png)
 
-RabbitMQ memiliki 1 koneksi
+### RabbitMQ memiliki 1 koneksi
 ![alt text](images/RabbitMQ_connection.png)
 
-menerima 5 event message dari publisher
+### menerima 5 event message dari publisher
 ![alt text](images/5_data.png)
 
-console dari publisher ketika menjalankan cargo run
-![alt text](images/console_publisher.png)
+### console dari publisher ketika menjalankan cargo run
+![alt text](images/console_pub.png)
 
 Image diatas menunjukkan saat melakukan cargo run di publisher dan subscriber, maka publisher akan mengirimkan data melalui RabbitMQ, kemudian subscriber akan menerima data yang sudah dipublish oleh publisher. Publisher akan membuat koneksi dengan server message dalam kasus ini RabbitMQ, publisher mengirim pesan ke exchage, exchange bertanggung jawab untuk megarahkan pesan ke queue, kemudian subscriber akan menerima pesan yang ada di queue.
 
-spikes di RabbitMQ
+### spikes di RabbitMQ
 ![alt text](spikes_RabbitMQ.png)
 
 pada gambar terlihat bahwa pada grafik kedua terjadi peningkatan, hal ini berhubungan dengan cargo run yang dijalankan di publisher, semakin sering publisher dijalankan maka akan terjadi peningkatan message rate karena RabbitMQ menerima lebih banyak pesan dalam suatu interval waktu. Pada grafik kedua saya menjalankan publisher lebih banyak daripada saat di grafik pertama.
+
+
+
+
+
 
 
 
