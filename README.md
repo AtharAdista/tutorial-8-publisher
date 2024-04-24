@@ -23,10 +23,10 @@ run?
 ![alt text](images/RabbitMQ_connection.png)
 
 ### menerima 5 event message dari publisher
-![alt text](images/5_data.png)
+![alt text](images/5_subs.png)
 
 ### console dari publisher ketika menjalankan cargo run
-![alt text](images/console_pub.png)
+![alt text](images/console_publisher.png)
 
 Image diatas menunjukkan saat melakukan cargo run di publisher dan subscriber, maka publisher akan mengirimkan data melalui RabbitMQ, kemudian subscriber akan menerima data yang sudah dipublish oleh publisher. Publisher akan membuat koneksi dengan server message dalam kasus ini RabbitMQ, publisher mengirim pesan ke exchage, exchange bertanggung jawab untuk megarahkan pesan ke queue, kemudian subscriber akan menerima pesan yang ada di queue.
 
